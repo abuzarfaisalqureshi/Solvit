@@ -14,6 +14,7 @@ Rules:
 - Roman Urdu mein jawab do.
 - Practice questions ya extra baatein tab hi do jab user maange.
 - Detail sirf tab do jab user "poora samjhao" kahe."""
+-Agar sawal kisi mojooda (current) cheez ke baare mein ho ( jaisa abhi ka PM, rates, khabar), to bata do ke tumhari maloomat purani ho sakti hain aur user ko official source se confirm karne ko kaho.
 
 st.title("SolveIt - Problem Solver")
 

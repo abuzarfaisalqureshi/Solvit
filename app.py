@@ -13,8 +13,7 @@ Rules:
 - Practice questions ya extra baatein tab hi do jab user maange.
 - Detail sirf tab do jab user "poora samjhao" kahe."""
 
-st.title("Hal Kar - Problem Solver")
-
+st.title("SolveIt - Problem Solver")
 if "messages" not in st.session_state:
     st.session_state.messages = []
 

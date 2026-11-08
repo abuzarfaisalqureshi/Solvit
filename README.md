@@ -1,65 +1,39 @@
-# SolveIt - AI Problem Solver
+ # SolveIt
 
-A simple AI chatbot that gives short, clear answers to everyday, study, and general problems. It replies in Roman Urdu and keeps the conversation going, so you can ask follow-up questions.
-
-**Live app:** [add your Streamlit link here]
+SolveIt ek simple AI chatbot hai jo roz-marra, parhai aur general problems ke chhote aur seedhe jawab deta hai. Jawab Roman Urdu mein aate hain aur chatbot pichli baat yaad rakhta hai, isliye follow-up sawal bhi poochh sakte ho.
 
 ## Features
 
-- Chat interface with conversation memory
-- Short, direct answers (no long tables or extra text unless you ask for "poora samjhao")
-- Replies in Roman Urdu
-- Friendly error message if the AI service is unavailable
+- Chat interface jisme baat-cheet yaad rehti hai
+- Chhote aur seedhe jawab (detail sirf tab jab "poora samjhao" likho)
+- Roman Urdu mein jawab
+- AI service band ho to saaf error message
 
 ## Tech Stack
 
 - Python
-- [Streamlit](https://streamlit.io) for the web interface
-- [Groq API](https://console.groq.com) for the AI model (`openai/gpt-oss-120b`)
+- Streamlit (website ke liye)
+- Groq API (AI model: `openai/gpt-oss-120b`)
 
-## Project Structure
+## Files
 
-```
-SolveIt/
-├── app.py              # The chatbot app
-├── requirements.txt    # Python libraries needed
-├── .gitignore          # Keeps secret keys out of GitHub
-└── README.md           # This file
-```
+- `app.py`: chatbot ka code
+- `requirements.txt`: zaroori libraries
+- `.gitignore`: secret key ko GitHub se bachata hai
 
-## Run It Locally
+## Deploy kaise karein (Streamlit Community Cloud)
 
-1. Clone the repository and open the folder.
-2. Install the libraries:
-   ```bash
-   pip install -r requirements.txt
-   ```
-3. Create a file `.streamlit/secrets.toml` and add your Groq API key:
+1. Repository GitHub par upload karo.
+2. share.streamlit.io par GitHub se login karo.
+3. **Create app** dabao, repository `SolveIt` chuno, main file `app.py` rakho.
+4. **Advanced settings** mein **Secrets** mein ye likho:
    ```toml
-   GROQ_API_KEY = "your_key_here"
+   GROQ_API_KEY = "yahan_apni_key"
    ```
-4. Start the app:
-   ```bash
-   streamlit run app.py
-   ```
+5. **Deploy** dabao.
 
-## Deploy on Streamlit Community Cloud
+## Zaroori baatein
 
-1. Push this repository to GitHub.
-2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub.
-3. Click **Create app**, choose the `SolveIt` repository, and set the main file to `app.py`.
-4. Under **Advanced settings → Secrets**, add:
-   ```toml
-   GROQ_API_KEY = "your_key_here"
-   ```
-5. Click **Deploy**.
-
-## Important Notes
-
-- Never commit your API key to GitHub. Keep it only in Streamlit Secrets or in the local `secrets.toml` file (which is listed in `.gitignore`).
-- AI answers can be wrong. Please double-check important answers, especially for math, science, health, or legal questions.
-- Model names on Groq change from time to time. If you get a "model not found" error, update the `MODEL` value in `app.py` with a current model name from the Groq docs.
-
-## Author
-
-Made by [Your Name]
+- API key kabhi GitHub par mat daalo. Sirf Streamlit Secrets mein rakho.
+- AI ke jawab ghalat bhi ho sakte hain. Math, science, sehat ya qanooni sawalon ke jawab khud check karo.
+- Groq kabhi kabhi models ke naam badal deta hai. Agar "model not found" error aaye to `app.py` mein `MODEL` ka naam current naam se badal do.
